@@ -1,25 +1,27 @@
-# Roblox → Discord Public Tracker
+# 🎯 Roblox Tracker
 
-Monitors **public** Roblox user profiles, avatar metadata and presence and posts changes as Discord embeds to a webhook you control.
+A simple, lightweight Python tool that tracks **public Roblox user data** (profile, display name, presence, etc.) and posts updates to a **Discord webhook** as embeds — perfect for learning, personal analytics, or community alerts.
 
-**Important:** This tool fetches only public Roblox data. Do not use it to collect private or unauthorized data. Confirm compliance with Roblox/Discord ToS and local law.
-
----
-
-## What’s included
-- `roblox_to_discord_tracker.py` — main tracker script.
-- `.env.example` — example environment file (copy to `.env`).
-- `requirements.txt` — Python dependencies.
-- `Dockerfile` & `docker-compose.yml` — optional containerized deployment.
-- `roblox_tracker.service` — example systemd service unit.
-- `.gitignore` — ignores secrets and common files.
+> ⚠️ **This tool only uses Roblox’s public APIs.**  
+> Do **not** use it to access private data, accounts you don’t own, or anything that violates Roblox or Discord Terms of Service.
 
 ---
 
-## Quick start (local, recommended)
-1. Install Python 3.10+ and `pip`.
-2. Clone this repo and `cd` into it.
-3. Create a Python virtualenv (recommended):
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate
+## 🧩 Features
+- Tracks **public Roblox profiles** for selected usernames.
+- Checks every few seconds (configurable).
+- Sends **Discord embed updates** when something changes.
+- Uses a simple `.env` file for setup (no hardcoded secrets).
+- Minimal dependencies and clean console output.
+
+---
+
+## 🛠️ Setup Guide
+
+### 1️⃣ Requirements
+- Python **3.10+**
+- A **Discord Webhook URL** (create one in your server’s channel settings)
+
+### 2️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
